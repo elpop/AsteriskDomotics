@@ -1,0 +1,73 @@
+context from-internal {
+    888 => {
+        goto ivr,s,1;
+    };
+ 
+    777 => {
+        Answer;
+        MusicOnHold();
+        Hangup;
+    };
+ 
+    8378 => {
+        Answer;
+        Playback(beep);
+        UserEvent(RELAY_8378,);
+        Hangup;
+    }; 
+    666 => {
+        Answer;
+        Playback(beep);
+        UserEvent(RELAY_1,);
+        wait(1);
+        UserEvent(RELAY_1,);
+        UserEvent(RELAY_2,);
+        wait(1);
+        UserEvent(RELAY_2,);
+        UserEvent(RELAY_3,);
+        wait(1);
+        UserEvent(RELAY_3,);
+        UserEvent(RELAY_4,);
+        wait(1);
+        UserEvent(RELAY_4,);
+        UserEvent(RELAY_5,);
+        wait(1);
+        UserEvent(RELAY_5,);
+        UserEvent(RELAY_6,);
+        wait(1);
+        UserEvent(RELAY_6,);
+        UserEvent(RELAY_7,);
+        wait(1);
+        UserEvent(RELAY_7,);
+        UserEvent(RELAY_8,);
+        wait(1);
+        UserEvent(RELAY_8,);
+        Playback(beep);
+        Hangup;
+    };
+}
+ 
+context ivr {
+    s => {
+        Answer;
+        Background(silence/9);
+    pregunta:
+        Set(TIMEOUT(response)=5);
+        Set(TIMEOUT(digit)=1);
+        WaitExten();
+        goto pregunta;
+    };
+    _X => {
+       UserEvent(RELAY_${EXTEN},);
+       goto s,pregunta;
+    };
+ 
+    t => {
+        goto ivr,s,pregunta;
+    };
+ 
+    i => {
+        goto ivr,s,pregunta;
+    };
+ 
+}

@@ -18,4 +18,8 @@ The demo of this idea is here (The explain is in spanish, sorry):
 
    http://cofradia.org/2013/05/13/asterisk-y-open-hardware-para-controlar-dispositivos-desde-un-telefono/
 
+You can see a demo on Youtube here:
+
+   https://www.youtube.com/watch?v=rcFMJC4n4dQ
+
 

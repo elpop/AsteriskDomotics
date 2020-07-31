@@ -51,23 +51,23 @@ context ivr {
     s => {
         Answer;
         Background(silence/9);
-    pregunta:
+    question:
         Set(TIMEOUT(response)=5);
         Set(TIMEOUT(digit)=1);
         WaitExten();
-        goto pregunta;
+        goto question;
     };
     _X => {
        UserEvent(RELAY_${EXTEN},);
-       goto s,pregunta;
+       goto s,question;
     };
  
     t => {
-        goto ivr,s,pregunta;
+        goto ivr,s,question;
     };
  
     i => {
-        goto ivr,s,pregunta;
+        goto ivr,s,question;
     };
  
 }

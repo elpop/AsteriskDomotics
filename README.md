@@ -141,7 +141,7 @@ The i wrote a Perl script to handle the serial comunication with the Arduino USB
             Set(TIMEOUT(response)=5);
             Set(TIMEOUT(digit)=1);
             WaitExten();
-            goto pregunta;
+            goto question;
         };
         _X => {
            UserEvent(RELAY_${EXTEN},);

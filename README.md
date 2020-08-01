@@ -1,25 +1,10 @@
 # AsteriskDomotics
 
+## Description
+
 ![light panel](https://raw.githubusercontent.com/elpop/AsteriskDomotics/master/images/light_1.jpg)
 
-## Author
-
-Fernando Romo (pop@cofradia.org)
-
-## License
-
-```
-GNU GENERAL PUBLIC LICENSE Version 3
-https://www.gnu.org/licenses/gpl-3.0.en.html
-See LICENSE.txt
-```
-
-## Abstract
-
 Program to control Lights, doors, etc. using Open Hardware and control them using a phone line connected to Asterisk PBX.
-
-
-## Description
 
 The main purpose of this project is:
 
@@ -193,3 +178,15 @@ The i wrote a Perl script to handle the serial comunication with the Arduino USB
     Don't forget to subscribe a SIP extension to test.
     
     Enjoy :)
+
+## Author
+
+Fernando Romo (pop@cofradia.org)
+
+## License
+
+```
+GNU GENERAL PUBLIC LICENSE Version 3
+https://www.gnu.org/licenses/gpl-3.0.en.html
+See LICENSE.txt
+```

@@ -66,6 +66,12 @@ The i wrote a Perl script to handle the serial comunication with the Arduino USB
     write = system,call,agent,user,config,command,reporting,originate
     ```
     
+    Reload the configuration with the user owner of the asterisk process with:
+    
+    ```
+    asterisk -rx'manager reload'
+    ``` 
+    
 2. In the file **/etc/asterisk/extensions.ael** i wrote this test configuration:
 
     ```
@@ -143,6 +149,12 @@ The i wrote a Perl script to handle the serial comunication with the Arduino USB
      
     }
     ```
+
+    Reload the configuration:
+    
+    ```
+    asterisk -rx'ael reload'
+    ``` 
 
     I you see, i use the **UserEvent** fuction from the AMI interface to send custom commands to the **arduino_control.pl** program.
     
